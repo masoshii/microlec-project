@@ -10,3 +10,11 @@
     background-color: #141414;
     color: whitesmoke;
 }
+
+.nav-ico i{
+    color: whitesmoke;
+}
+
+.nav-ico:hover i{
+    color: #67ff59;
+}
