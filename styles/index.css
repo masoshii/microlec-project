@@ -1,12 +1,17 @@
+* {
+    margin-right: 0px !important;
+}
+
 .navbar-brand img {
-    max-height: 90px;
+    max-width: 200px;
+    height: auto;
 }
 
 .navbar {
     background-color: #0e0e0e;
 }
 
-.main {
+.navbar-sub {
     background-color: #141414;
     color: whitesmoke;
 }
@@ -17,4 +22,73 @@
 
 .nav-ico:hover i{
     color: #67ff59;
+}
+
+#search-form {
+    border-radius: 6px;
+}
+
+.dropdown-center:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown-menu {
+    background-color: #141414 !important;
+    width: 100% !important;
+}
+
+.subnav-btn {
+    background-color: #141414 !important;
+    border: none !important;
+    color: aliceblue !important;
+}
+
+
+.dropdown-center:hover .subnav-btn .dropdown-center {
+    background-color: #1c1c1c !important;
+}
+
+.dropdown-menu a {
+    display: block;
+    text-decoration: none;
+    color: whitesmoke;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 0;
+    text-align: center;
+}
+
+.dropdown-menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu a:hover {
+    color: #67ff59;
+    background-color: #242424;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+}
+
+.subnav-item:hover .subnav-btn{
+    background-color: #242424 !important;
+    color: #67ff59 !important;
+}
+
+.subnav-item:hover {
+    background-color: #242424;
+}
+
+#contact-btn {
+    text-decoration: none;
+    color: #b783f6;
+    cursor: pointer;
+}
+
+#contact-form-link {
+    cursor: pointer;
 }
