@@ -1,0 +1,32 @@
+#footer-container {
+    display: block;
+    position: absolute;
+    background-color: #0e0e0e;
+    width: 100%;
+}
+
+.fwtext {
+    color: rgb(168, 168, 168);
+}
+
+.rs-ico i {
+    color: rgb(168, 168, 168);
+}
+
+.footer-sep {
+    color: green;
+}
+
+.com-info {
+    color: rgb(60, 60, 60);
+}
+
+#smed-row {
+    margin-top: 10px;
+}
+
+@media (max-width: 576px) {
+    #footer-container{
+        display: block;
+    }
+}

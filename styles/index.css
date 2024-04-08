@@ -1,0 +1,65 @@
+main {
+    background-color: rgb(20, 20, 20);
+    overflow-x: scroll;
+    padding-bottom: 10px;
+    color: whitesmoke;
+}
+
+.carousel-inner .carousel-item {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+}
+.carousel-inner .carousel-item:first-of-type {
+  position: relative;
+}
+.carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-inner {
+    width: 70%;
+    height: auto;
+}
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.col-centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#title-wlc {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 30px;
+    text-align: center;
+    
+}
+#title-inv {
+    font-size: 20px;
+}
+
+#products-title {
+    font-size: 14px;
+}
+
+@media (min-width: 576px) {
+    .carousel-item img {
+        max-width: 700px;
+        height: auto;
+    }
+}
+
+@media (max-width: 990px) {
+    #title-wlc {
+        font-size: 20px;
+    }
+}
+
+
