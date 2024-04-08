@@ -1,1 +1,0 @@
-$('#collapseContinents').toggleClass('littlescreen', $(window).width() > 800);
