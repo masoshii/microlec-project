@@ -213,7 +213,7 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
     .navbar-brand img {
         max-width: 500px;
         height: auto;

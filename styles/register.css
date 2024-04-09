@@ -1,0 +1,23 @@
+main {
+    background-color: rgb(20, 20, 20);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-bottom: calc(100% - 160px);
+    color: whitesmoke;
+    margin-bottom: -160px;
+}
+
+main::after {
+    content: "";
+    display: block;
+}
+
+#register-title {
+    margin-top: 50px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 30px;
+}
+
+#register-sub {
+    font-size: 15px;
+}
