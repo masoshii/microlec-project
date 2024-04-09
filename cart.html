@@ -4,10 +4,10 @@
     <!--Config-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Microlec | Inicio</title>
+    <title>Microlec | Carro</title>
     <link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
     <!--Exports Internos-->
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/cart.css">
     <link rel="stylesheet" href="styles/navbar-defaults.css">
     <link rel="stylesheet" href="styles/footer-defaults.css">
     <link rel="stylesheet" href="styles/defaults.css">
@@ -43,7 +43,7 @@
                     <ul class="navbar-nav">
                         <li class="navbar-item">
                             <span class="icon-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Carro">
-                                <a href="cart.html" class="nav-link nav-ico">
+                                <a href="#" class="nav-link nav-ico">
                                     <i class="bi bi-cart h4 "></i>
                                 </a>
                             </span>
@@ -118,7 +118,7 @@
             <div class="collapse" id="sidebar-list-mobile">
                 <ul id="sidebar-items">
                     <li class="sidebar-item sidebar-item-main"><a href="#"><i class="bi bi-person h3"></i>&nbspCuenta</a></li>
-                    <li class="sidebar-item sidebar-item-main" id="carro-mobile"><a href="cart.html"><i class="bi bi-cart h4 "></i>&nbspCarro</a></li>
+                    <li class="sidebar-item sidebar-item-main" id="carro-mobile"><a href="#"><i class="bi bi-cart h4 "></i>&nbspCarro</a></li>
                     <li><hr class="solid sidebar-sep"></li>
                     <li><h3 class="sidebar-item">Categorías</h3></li>
                     <li class="sidebar-item">
@@ -167,43 +167,256 @@
             </div>
     </header>
     <main>
-        <br>
-        <div id="indexcarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="d-flex justify-content-center">
-                        <img src="resources/carousel1.jpg" alt="Offer 1">
+        <h1 id="cart-title">Carro</h1>
+        <h4 id="cart-sub">¡Compra tus productos!</h4>
+        <div class="container align-items-start mx-auto">
+            <div class="row cart-item">
+                <div class="col-auto">
+                    <a href="#">
+                        <img src="resources/product1.webp" alt="Producto 1" class="item-img">
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="#" style="text-decoration: none;">
+                        <h5 class="item-title">Diodo Rectificador 1N4007</h5>
+                    </a>
+                    <br>
+                    <div class="row">
+                        <div class="col mt-4">
+                            <h6>$230 c/u</h6>
+                        </div>
+                        <div class="col mb-0">
+                            <label for="prod-2-quantity">Cantidad:</label>
+                            <input type="number" id="prod-2-quantity" min="1" max="100" step="1" value="1">
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center">
-                        <img src="resources/carousel2.jpg" alt="Offer 1">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center">
-                        <img src="resources/carousel3.jpg" alt="Offer 1">
+                <div class="row">
+                    <div class="col">
+                        <a href="#" style="text-decoration: none;" class="delete-cnt">
+                            <h4 class="delete-btn">Eliminar</h4>
+                        </a>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#indexcarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#indexcarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-        </div>
-        <br>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <h1 id="title-wlc">¡Bienvenido/a a Microlec!</h1>
+            <div class="row cart-item">
+                <div class="col-auto">
+                    <a href="#">
+                        <img src="resources/product2.webp" alt="Producto 2" class="item-img">
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="#" style="text-decoration: none;">
+                        <h5 class="item-title">Arduino Uno R3</h5>
+                    </a>
+                    <br>
+                    <div class="row">
+                        <div class="col mt-4">
+                            <h6>$25.900</h6>
+                        </div>
+                        <div class="col mb-0">
+                            <label for="prod-2-quantity">Cantidad:</label>
+                            <input type="number" id="prod-2-quantity" min="1" max="100" step="1" value="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a href="#" style="text-decoration: none;" class="delete-cnt">
+                            <h4 class="delete-btn">Eliminar</h4>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <br>
+            <div class="row cart-item">
+                <div class="col-auto">
+                    <a href="#">
+                        <img src="resources/product3.webp" alt="Producto 3" class="item-img">
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="#" style="text-decoration: none;">
+                        <h5 class="item-title">EVGA GeForce RTX 4090</h5>
+                    </a>
+                    <br>
+                    <div class="row">
+                        <div class="col mt-4">
+                            <h6>$2.699.000</h6>
+                        </div>
+                        <div class="col mb-0">
+                            <label for="prod-2-quantity">Cantidad:</label>
+                            <input type="number" id="prod-2-quantity" min="1" max="100" step="1" value="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a href="#" style="text-decoration: none;" class="delete-cnt">
+                            <h4 class="delete-btn">Eliminar</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row cart-item">
+                <div class="col-auto">
+                    <a href="#">
+                        <img src="resources/product4.png" alt="Producto 4" class="item-img">
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="#" style="text-decoration: none;" class="delete-cnt">
+                        <h5 class="item-title">Raspberry PI 5</h5>
+                    </a>
+                    <br>
+                    <div class="row">
+                        <div class="col mt-4">
+                            <h6>$139.990</h6>
+                        </div>
+                        <div class="col mb-0">
+                            <label for="prod-2-quantity">Cantidad:</label>
+                            <input type="number" id="prod-2-quantity" min="1" max="100" step="1" value="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a href="#" style="text-decoration: none;" class="delete-cnt">
+                            <h4 class="delete-btn">Eliminar</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row cart-item">
+                <div class="col-auto">
+                    <a href="#">
+                        <img src="resources/product5.webp" alt="Producto 5" class="item-img">
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="#" style="text-decoration: none;">
+                        <h5 class="item-title">10x Pack Resistencias 43000Ω</h5>
+                    </a>
+                    <br>
+                    <div class="row">
+                        <div class="col mt-4">
+                            <h6>$3.400</h6>
+                        </div>
+                        <div class="col mb-0">
+                            <label for="prod-2-quantity">Cantidad:</label>
+                            <input type="number" id="prod-2-quantity" min="1" max="100" step="1" value="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a href="#" style="text-decoration: none;" class="delete-cnt">
+                            <h4 class="delete-btn">Eliminar</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row cart-item">
+                <div class="col-auto">
+                    <a href="#">
+                        <img src="resources/product6.webp" alt="Producto 6" class="item-img">
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="#" style="text-decoration: none;">
+                        <h5 class="item-title">Cable Jack 6.3mm de 20 Metros</h5>
+                    </a>
+                    <br>
+                    <div class="row">
+                        <div class="col mt-4">
+                            <h6>$22.990</h6>
+                        </div>
+                        <div class="col mb-0">
+                            <label for="prod-2-quantity">Cantidad:</label>
+                            <input type="number" id="prod-2-quantity" min="1" max="100" step="1" value="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a href="#" style="text-decoration: none;" class="delete-cnt">
+                            <h4 class="delete-btn">Eliminar</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row cart-item">
+                <div class="col-auto">
+                    <a href="#">
+                        <img src="resources/product7.webp" alt="Producto 7" class="item-img">
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="#" style="text-decoration: none;" class="delete-cnt">
+                        <h4 class="item-title">Multímetro Digital Fluke 114</h4>
+                    </a>
+                    <br>
+                    <div class="row">
+                        <div class="col mt-4">
+                            <h6>$320.000</h6>
+                        </div>
+                        <div class="col mb-0">
+                            <label for="prod-2-quantity">Cantidad:</label>
+                            <input type="number" id="prod-2-quantity" min="1" max="100" step="1" value="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a href="#" style="text-decoration: none;" class="delete-cnt">
+                            <h4 class="delete-btn">Eliminar</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row cart-item">
+                <div class="col-auto">
+                    <a href="#">
+                        <img src="resources/product8.webp" alt="Producto 8" class="item-img">
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="#" style="text-decoration: none;">
+                        <h4 class="item-title">Western Digital Black 500GB</h4>
+                    </a>
+                    <br>
+                    <div class="row">
+                        <div class="col mt-4">
+                            <h6>$55.990</h6>
+                        </div>
+                        <div class="col mb-0">
+                            <label for="prod-2-quantity">Cantidad:</label>
+                            <input type="number" id="prod-2-quantity" min="1" max="100" step="1" value="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a href="#" style="text-decoration: none;" class="delete-cnt">
+                            <h4 class="delete-btn">Eliminar</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row checkout">
+                <h3 id="checkout-title">Total</h3>
+                <hr id="checkout-sep">
+                <div class="col">
+                    <h5>Productos: $3.267.500</h5>
+                    <h5>Envío: $20.540</h5>
+                    <h5>Total: $3.288.040</h5>
+                </div>
+                <button type="submit" class="btn btn-outline-success">
+                    Comprar
+                </button>
+            </div>
             <div class="row">
                 <div class="col">
-                    <h5 class="text-left" id="products-title">¡Explora nuestros mejores productos!</h5>
+                    <h5 class="text-left" id="products-title">También podría interesarte...</h5>
                 </div>
             </div>
             <div class="d-flex flex-row d-inline-block mx-auto" id="prodcards">
@@ -311,12 +524,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2 id="moreinfo">¿Quieres más información sobre nosotros?</h2>
-                <h2 class="enterinv"><a href="#" style="text-decoration: none; color: white;">¡Entra aquí!</a></h2>
             </div>
         </div>
     </main>

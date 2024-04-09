@@ -1,0 +1,94 @@
+.cart-item {
+    background-color: rgb(53, 53, 53);
+    margin-bottom: 1px;
+    border-radius: 2px;
+}
+
+.delete-cnt:hover h4{
+    color: #67ff59;
+}
+
+.item-img {
+    width: 100px;
+    height: auto;
+    border: transparent;
+    border-radius: 2px;
+}
+
+.item-title {
+    color: white;
+}
+
+.item-title:hover {
+    color: #67ff59;
+}
+
+.delete-btn {
+    font-size: 15px;
+    margin-left: 25px;
+    color:  white;
+}
+
+.checkout {
+    background-color: rgb(35, 35, 35);
+}
+
+#checkout-title {
+    margin-top: 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 30px;
+    text-align: left;
+}
+
+#checkout-sep {
+    color: rgb(85, 85, 85);
+}
+
+#products-title {
+    font-size: 14px;
+}
+
+.item-title{
+    font-size: 13px;
+    align-self: flex-start;
+}
+
+.item-price {
+    font-weight: bolder;
+    font-size: 10px;
+    align-self: flex-end;
+}
+
+.card-body {
+    display: flex;
+}
+
+.card-body h5{
+    color: white;
+}
+
+.item-card {
+    width: 150px;
+    height: auto;
+}
+
+.card {
+    margin-right: 20px !important;
+}
+
+#prodcards {
+    overflow-x:auto;
+}
+
+#cart-title {
+    margin-top: 100px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 30px;
+    text-align: center;
+}
+
+#cart-sub {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
