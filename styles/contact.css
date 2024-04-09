@@ -1,0 +1,33 @@
+main {
+    background-color: rgb(20, 20, 20);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-bottom: calc(100% - 160px);
+    color: whitesmoke;
+    margin-bottom: -160px;
+}
+
+main::after {
+    content: "";
+    display: block;
+}
+
+.names-data {
+    width: 400px !important;
+}
+
+#commentid {
+    resize: none;
+}
+
+#contact-title {
+    margin-top: 50px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 30px;
+}
+
+#contact-sub {
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+

@@ -212,3 +212,10 @@
         margin-left: 10vw;
     }
 }
+
+@media (min-width: 1200px) {
+    .navbar-brand img {
+        max-width: 500px;
+        height: auto;
+    }
+}
