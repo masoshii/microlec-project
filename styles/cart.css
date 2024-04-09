@@ -33,6 +33,10 @@
     background-color: rgb(35, 35, 35);
 }
 
+#exampleModalLabel h1 {
+    color: black !important;
+}
+
 #checkout-title {
     margin-top: 10px;
     font-family: "JetBrains Mono", monospace;

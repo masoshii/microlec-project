@@ -70,3 +70,8 @@ function closeOnClick(){
       });
     }, false);
   })();
+
+
+function reloadPage(){
+    location.reload()
+}
