@@ -1,8 +1,8 @@
 main {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(232, 232, 232);
     overflow-y: hidden;
     overflow-x: hidden;
-    color: whitesmoke;
+    color: black;
     margin-bottom: -160px;
 }
 
