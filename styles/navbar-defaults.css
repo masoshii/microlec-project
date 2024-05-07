@@ -181,12 +181,15 @@
     z-index: 100;
 }
 
+
 @media (min-width: 576px) {
     #sidebar-show {
         display: none;
     }
 }
 
+
+/*NO TOCAR - Mobile*/
 @media (max-width: 576px) {
     .navbar-brand img {
         display: inline-block;
@@ -213,9 +216,36 @@
     }
 }
 
+
+
 @media (min-width: 1400px) {
     .navbar-brand img {
         max-width: 500px;
         height: auto;
+    }
+}
+
+@media (min-width: 3000px){
+    .navbar-brand img {
+        max-width: 900px;
+        height: auto;
+    }
+    #search-form input{
+        width: 700px;
+        height: 60px;
+        margin-top: 100px;
+    }
+    #search-form button {
+        width: 100px;
+        height: 60px;
+    }
+    #cart-item i {
+        font-size: 55px;
+    }
+    #login-item i {
+        font-size: 60px;
+    }
+    #main-nav-items {
+        margin-top: 100px !important;
     }
 }
