@@ -25,6 +25,7 @@ main {
 
 #contact-form-container {
     background-color: white;
+    box-shadow: 10px 10px 10px -9px rgba(0,0,0,0.40);
 }
 
 #contact-image {
@@ -77,9 +78,16 @@ main {
     font-size: 10px;
 }
 
+@media (min-width: 2000px){
+    #contact-image {
+        max-height: 1200px;
+        width: auto;
+    }
+}
+
 @media (min-width: 3000px){
     #contact-title {
-        font-size: 80px;
+        font-size: 60px;
     }
     #contact-sub {
         font-size: 35px;
@@ -112,5 +120,11 @@ main {
     
     #warn-msg {
         font-size: 24px;
+    }
+    .error-label {
+        font-size: 20px;
+    }
+    .invalid-feedback {
+        font-size: 25px !important;
     }
 }
