@@ -34,7 +34,7 @@ main {
     padding-bottom: 10px;
 }
 
-#lname-name-group input {
+#lname-name-group input, #email-group input {
     background-color: rgb(236, 236, 236);
     border: 1px solid rgb(236, 236, 236);
     width: 102%;
@@ -46,6 +46,35 @@ main {
 
 #contact-form-container {
     width: 60%;
+}
+
+#contact-form {
+    margin-top: 25%;
+}
+
+#comment-group textarea {
+    background-color: rgb(236, 236, 236);
+    border: 1px solid rgb(236, 236, 236);
+    height: 100px;
+}
+
+#submit-btn {
+    background-color: white;
+    color: rgb(63, 185, 63);
+    border: 1px solid rgb(63, 185, 63);
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 10%;
+    transition: 0.3s;
+}
+
+#submit-btn:hover {
+    background-color: rgb(63, 185, 63);
+    color: white;
+}
+
+#warn-msg {
+    font-size: 10px;
 }
 
 @media (min-width: 3000px){
@@ -67,5 +96,21 @@ main {
     #lname-name-group input {
         font-size: 30px;
     }
+
+    #email-group input {
+        font-size: 30px;
+    }
     
+    #comment-group textarea {
+        font-size: 30px;
+        height: 200px !important;
+    }
+
+    #submit-btn {
+        font-size: 30px;
+    }
+    
+    #warn-msg {
+        font-size: 24px;
+    }
 }
