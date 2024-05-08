@@ -70,9 +70,3 @@ function closeOnClick(){
       });
     }, false);
   })();
-
-
-$(document).on("click", ".btn-success", function () {
-    var bootstrapValidator = $('#search-form').data('bootstrapValidator');
-    bootstrapValidator.enableFieldValidators('search-form-input', false);
-});

@@ -116,6 +116,23 @@
     border-color: rgb(63, 185, 63);
 }
 
+
+
+/*PRODUCTOS*/
+#product-list {
+    background-color: rgb(238, 238, 238);
+    max-height: 150px;
+    border-bottom: 10px solid white;
+}
+.product-item-image {
+    margin-left: -11px;
+    height: 141px;
+    width: auto;
+}
+
+
+
+
 @media (min-width: 3000px){
     #cart-title {
         font-size: 100px;
