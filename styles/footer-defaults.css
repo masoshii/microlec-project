@@ -2,8 +2,7 @@
     display: block;
     position: absolute;
     background-color: #0e0e0e;
-    width: 100%;
-    height: 200px;
+    padding-bottom: 20px;
 }
 
 .fwtext {
@@ -14,12 +13,38 @@
     color: rgb(168, 168, 168);
 }
 
+.rs-ico i:hover {
+    color: rgb(112, 221, 112);
+}
+
 .footer-sep {
     color: green;
 }
 
 .com-info {
-    color: rgb(60, 60, 60);
+    color: rgb(133, 133, 133);
+}
+
+.footer-title h3 {
+    font-size: 20px;
+    color: rgb(168, 168, 168);
+}
+
+.footer-title {
+    border-left: 2px solid lightgreen;
+}
+
+#need-assist-title h3 {
+    border-left: 0px solid lightblue !important;
+}
+
+.footer-choice a, .footer-choice p{
+    text-decoration: none;
+    color: rgb(168, 168, 168);
+}
+
+.footer-choice a:hover {
+    color: rgb(112, 221, 112);
 }
 
 #smed-row {
@@ -33,5 +58,28 @@ footer, main::after {
 @media (max-width: 576px) {
     #footer-container{
         display: block;
+    }
+}
+
+@media (min-width: 3000px){
+    .fwtext h4{
+        font-size: 80px;
+    }
+
+    .rs-ico i{
+        font-size: 60px;
+    }
+
+    .com-info{
+        font-size: 40px;
+    }
+
+    .footer-title h3 {
+        font-size: 50px;
+        color: rgb(168, 168, 168);
+    }
+    
+    .footer-choice a, .footer-choice p{
+        font-size: 40px;
     }
 }
