@@ -1,4 +1,6 @@
-
+main {
+    padding-bottom: 161px;
+}
 
 .names-data {
     width: 400px !important;
@@ -6,10 +8,6 @@
 
 #commentid {
     resize: none;
-}
-
-#contact-form input{
-    background-color: rgb(155, 155, 155);
 }
 
 #contact-title {
@@ -33,6 +31,21 @@
     max-height: 500px;
     width: auto;
     padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#lname-name-group input {
+    background-color: rgb(236, 236, 236);
+    border: 1px solid rgb(236, 236, 236);
+    width: 102%;
+}
+
+#lname-name-group {
+    margin-right: 20px;
+}
+
+#contact-form-container {
+    width: 60%;
 }
 
 @media (min-width: 3000px){
@@ -44,7 +57,15 @@
         margin-left: 30%;
     }
     #contact-image {
-        max-height: 900px;
+        max-height: 930px;
         width: auto;
     }
+    #contact-form-container {
+        width: 100%;
+    }
+    
+    #lname-name-group input {
+        font-size: 30px;
+    }
+    
 }
