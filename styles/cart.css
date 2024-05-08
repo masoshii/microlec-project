@@ -1,98 +1,156 @@
-.cart-item {
-    background-color: rgb(53, 53, 53);
-    margin-bottom: 1px;
-    border-radius: 2px;
-}
-
-.delete-cnt:hover h4{
-    color: #67ff59;
-}
-
-.item-img {
-    width: 100px;
-    height: auto;
-    border: transparent;
-    border-radius: 2px;
-}
-
-.item-title {
-    color: white;
-}
-
-.item-title:hover {
-    color: #67ff59;
-}
-
-.delete-btn {
-    font-size: 15px;
-    margin-left: 25px;
-    color:  white;
-}
-
-.checkout {
-    background-color: rgb(35, 35, 35);
-}
-
-#exampleModalLabel h1 {
-    color: black !important;
-}
-
-#checkout-title {
-    margin-top: 10px;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 30px;
-    text-align: left;
-}
-
-#checkout-sep {
-    color: rgb(85, 85, 85);
-}
-
-#products-title {
-    font-size: 14px;
-}
-
-.item-title{
-    font-size: 13px;
-    align-self: flex-start;
-}
-
-.item-price {
-    font-weight: bolder;
-    font-size: 10px;
-    align-self: flex-end;
-}
-
-.card-body {
-    display: flex;
-}
-
-.card-body h5{
-    color: white;
-}
-
-.item-card {
-    width: 150px;
-    height: auto;
-}
-
-.card {
-    margin-right: 20px !important;
-}
-
-#prodcards {
-    overflow-x:auto;
+#cart-container {
+    background-color: white;
+    margin-top: 100px;
+    max-width: 94%;
 }
 
 #cart-title {
-    margin-top: 100px;
+    margin-top: 30px;
+    margin-left: 10px;
     font-family: "JetBrains Mono", monospace;
-    font-size: 30px;
-    text-align: center;
+    font-size: 50px;
+    color: rgb(0, 117, 0);
 }
 
-#cart-sub {
+#cart-prodq {
+    margin-top: 45px;
+    font-size: 15px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#product-list {
+    max-width: calc(94%/2);
+    background-color: rgb(242, 242, 242);
+    border-left: 20px solid white;
+}
+
+#product-summary {
+    max-width: calc(94%/2);
+    border-left: 60px solid white;
+    border-right: 20px solid white;
+    background-color: rgb(242, 242, 242);
+    border-bottom: 50px solid white;
+    height: 60%;
+}
+
+
+#summary-title {
+    margin-left: 20px;
+    margin-top: 5%;
+    font-size: 30px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(0, 117, 0);
+}
+
+#summary-sep {
+    color: rgb(163, 163, 163);
+}
+
+#product-qtitle, #discount-title, #tproduct-title{
+    margin-left: 20px;
     font-size: 20px;
-    text-align: center;
-    margin-bottom: 50px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(103, 63, 141);
+}
+
+#product-qvalue, #discount-value, #tproduct-value {
+    font-size: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(49, 49, 49);
+}
+
+#promocode-send {
+    background-color: none;
+    color: rgb(63, 185, 63);
+    border: 1px solid rgb(63, 185, 63);
+    border-radius: 4px;
+    width: 50%;
+    margin-top: 10%;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+#promocode-send:hover {
+    background-color: rgb(63, 185, 63);
+    color: white;
+    
+}
+
+#promocode-input {
+    background-color: rgb(216, 216, 216);
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+
+#promocode-form {
+    margin-top: 2%;
+}
+
+#proceed-btn {
+    margin-left: 7%;
+    max-width: 90%;
+    background-color: rgb(63, 185, 63);
+    color: white;
+    border: 1px solid rgb(63, 185, 63);
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+#proceed-btn:hover {
+    background-color: rgb(51, 143, 51);
+    border-color: rgb(51, 143, 51)
+}
+
+#proceed-btn:active {
+    background-color: rgb(63, 185, 63);
+    border-color: rgb(63, 185, 63);
+}
+
+@media (min-width: 3000px){
+    #cart-title {
+        font-size: 100px;
+    }
+    #cart-prodq {
+        margin-top: 80px;
+        font-size: 40px;
+    }
+    #summary-title {
+        font-size: 80px;
+    }
+    #summary-prodq {
+        font-size: 40px;
+    }
+    #product-qtitle, #discount-title, #tproduct-title {
+        font-size: 40px;
+    }
+    
+    #product-qvalue, #discount-value, #tproduct-value {
+        font-size: 40px;
+    }
+
+    #promocode-input {
+        font-size: 40px;
+    }
+
+    .invalid-feedback {
+        font-size: 30px !important;
+    }
+
+    #promocode-send {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    #proceed-btn {
+        font-size: 35px;
+    }
 }
