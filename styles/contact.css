@@ -85,7 +85,7 @@ main {
     }
 }
 
-@media (min-width: 3000px){
+@media (min-width: 2000px){
     #contact-title {
         font-size: 60px;
     }

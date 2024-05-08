@@ -237,35 +237,39 @@
     }
 }
 
-@media (min-width: 3000px){
+@media (min-width: 2000px){
     .navbar-brand img {
         max-width: 900px;
         height: 200px;
     }
     #search-form input{
-        width: 700px;
+        width: 900px;
         height: 70px;
+        font-size: 30px;
     }
     #search-form button {
         width: 200px;
-        height: 80px;
+        height: 70px;
         bottom: 10px;
-        font-size: 40px;
+        font-size: 30px;
     }
     #cart-item i {
-        font-size: 65px;
+        font-size: 55px;
     }
     #login-item i {
-        font-size: 70px;
+        font-size: 60px;
     }
     .subnav-item button {
         font-size: 40px;
     }
     #contact-btn {
-        font-size: 40px;
+        font-size: 30px;
     }
     .subnav-item i{
-        font-size: 30px;
+        font-size: 20px;
+    }
+    .subnav-btn{
+        font-size: 30px !important;
     }
     #search-form-input {
         font-size: 40px;
@@ -275,6 +279,6 @@
         height: auto !important;
     }
     .dropdown-item {
-        font-size: 40px;
+        font-size: 20px;
     }
 }
