@@ -270,4 +270,11 @@
     #search-form-input {
         font-size: 40px;
     }
+    .dropdown-menu {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .dropdown-item {
+        font-size: 40px;
+    }
 }
