@@ -50,7 +50,7 @@
     color: rgb(163, 163, 163);
 }
 
-#product-qtitle, #discount-title, #tproduct-title{
+#product-qtitle, #discount-title, #tproduct-title, #tship-title{
     margin-left: 20px;
     font-size: 20px;
     font-family: "Ubuntu", sans-serif;
@@ -59,7 +59,7 @@
     color: rgb(103, 63, 141);
 }
 
-#product-qvalue, #discount-value, #tproduct-value {
+#product-qvalue, #discount-value, #tproduct-value, #tship-value {
     font-size: 20px;
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;

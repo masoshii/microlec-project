@@ -4,7 +4,7 @@ function isEmailValid(emailString){
     return emailRegex.test(emailString);
 }
 
-function cookieProcess(cookie_value){
+function cookieProcess(cookieValue){
   
     var actualChar;
     var productID = "";
@@ -12,8 +12,8 @@ function cookieProcess(cookie_value){
     var fetchingID = true;
     var products = new Map();
   
-    for (let i = 0; i < cookie_value.length; i++) {
-      actualChar = cookie_value.charAt(i);
+    for (let i = 0; i < cookieValue.length; i++) {
+      actualChar = cookieValue.charAt(i);
       if(actualChar == '%'){
         fetchingID = false;
       } else if (actualChar == '&'){
@@ -29,11 +29,26 @@ function cookieProcess(cookie_value){
         };
       };
     }
-    for (let [key, value] of products) {
-        // Mostrar el nombre de la clave y su valor en un alert
-        alert(`Producto: ${key}, Cantidad: ${value}`);
-      }
+    return products;
+}
+
+
+function productsInCookie(cookieValue){
+    var actualChar;
+    var fetchingID = true;
+    var quantity = 0;
+  
+    for (let i = 0; i < cookieValue.length; i++) {
+      actualChar = cookieValue.charAt(i);
+      if(actualChar == '%'){
+        quantity += 1;
+        fetchingID = false;
+      } else if (actualChar == '&'){
+        fetchingID = true;
+    }
   }
+  return quantity;
+}
   
 function readCookie(name)
 {
@@ -51,4 +66,16 @@ return null;
 function isNumeric(str) {
 if (typeof str != "string") return false
 return !isNaN(str) && !isNaN(parseFloat(str))
+}
+
+function deleteProductCookie(cookieValue, idToRemove) {
+  var regex = new RegExp(`${idToRemove}%\\d+&`, 'g');
+  
+  var updatedCookieValue = cookieValue.replace(regex, '');
+  
+  if (updatedCookieValue.charAt(updatedCookieValue.length - 1) !== '&') {
+    updatedCookieValue = updatedCookieValue.slice(0, -1) + '&';
+  }
+  
+  document.cookie = `cart_items=${updatedCookieValue}; expires=Fri, 31 Dec 2100 12:00:00 UTC; path=/`
 }
