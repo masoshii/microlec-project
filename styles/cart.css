@@ -32,7 +32,7 @@
     border-right: 20px solid white;
     background-color: rgb(242, 242, 242);
     border-bottom: 50px solid white;
-    height: 60%;
+    max-height: 50%;
 }
 
 
@@ -122,20 +122,54 @@
 
 /*PRODUCTOS*/
 #product-list {
-    background-color: rgb(238, 238, 238);
-    max-height: 150px;
-    border-bottom: 10px solid white;
+    background-color: rgb(255, 255, 255);
+    margin-right: 10px;
+}
+
+.product-item {
+    margin-bottom: 50px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
 }
 
 .product-item-image {
     margin-left: -12px;
-    height: 141px;
+    max-height: 141px;
     width: auto;
 }
 
-.product-item-title {
+.product-item-brand {
     font-size: 25px;
-    margin-top: 10px;
-    color: rgb(1, 58, 2)
+    color: rgb(1, 58, 2);
 }
+
+.product-item-name {
+    max-width: 50% !important;
+}
+
+.product-item-delete {
+    text-decoration: underline;
+    color:rgb(0, 159, 0);
+}
+
+.product-item-delete:active {
+    color: rgb(0, 79, 0);
+}
+
+.product-quantity-select{
+    border: none;
+    background-color: rgb(241, 240, 240);
+    color: rgb(53, 53, 53);
+    font-size: 20px;
+}
+
+.product-quantity-select:focus {
+    outline: none;
+}
+
+.product-price {
+    text-align: right;
+}
+
+
 
