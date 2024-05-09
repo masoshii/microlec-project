@@ -121,6 +121,11 @@
 
 
 /*PRODUCTOS*/
+
+#no-items h2 {
+    color: rgb(41, 41, 41);
+}
+
 #product-list {
     background-color: rgb(255, 255, 255);
     margin-right: 10px;

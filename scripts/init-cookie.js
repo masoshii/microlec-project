@@ -1,3 +1,3 @@
 $(document).ready(function(){
-    alert("Hola");
+    document.cookie = "testcookie=chao";
 })

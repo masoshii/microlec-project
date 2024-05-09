@@ -1,0 +1,65 @@
+{
+    "000":{
+        "brand": "Product Brand",
+        "name": "Product Name",
+        "image": "prod-000.png",
+        "price": 12345689,
+        "step": 1
+    },
+    "001":{
+        "brand": "Vishay Semiconductors",
+        "name": "Diodo Rectificador 1N4007",
+        "image": "prod-001.webp",
+        "price": 99,
+        "step": 10
+    },
+    "002":{
+        "brand": "Arduino",
+        "name": "Arduino Uno R3",
+        "image": "prod-002.webp",
+        "price": 25000,
+        "step": 1
+    },
+    "003":{
+        "brand": "EVGA",
+        "name": "NVIDIA GeForce RTX 4090",
+        "image": "prod-003.webp",
+        "price": 2699000,
+        "step": 1
+    },
+    "004":{
+        "brand": "Raspberry",
+        "name": "Raspberry PI 5",
+        "image": "prod-004.png",
+        "price": 139990,
+        "step": 1
+    },
+    "005":{
+        "brand": "Vishay Semiconductors",
+        "name": "10X Pack Resistencias 43000Ω",
+        "image": "prod-005.webp",
+        "price": 3400,
+        "step": 1
+    },
+    "006":{
+        "brand": "Genérico",
+        "name": "Cable Jack 6.3mm de 20 Metros",
+        "image": "prod-006.webp",
+        "price": 22990,
+        "step": 1
+    },
+    "007":{
+        "brand": "Fluke",
+        "name": "Multímetro Digital Fluke 114",
+        "image": "prod-007.webp",
+        "price": 320000,
+        "step": 1
+    },
+    "008":{
+        "brand": "Western Digital",
+        "name": "WD BLACK Unidad SSD 500GB PCIe NVMe",
+        "image": "prod-008.webp",
+        "price": 55990,
+        "step": 1
+    }
+}

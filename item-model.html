@@ -1,0 +1,29 @@
+<div class="row product-item" id="prod-000"> <!--For every entry repeat this block with custom values (jQuery)-->
+    <div class="col-md-2"> <!--Column 1: Product Image-->
+        <img src="resources/products/prod-000.png" alt="Test Alt" class="product-item-image">
+    </div>
+    <div class="col-md-5 align-self-end"> <!--Column 2: Product title, Delete from cart-->
+        <div class="row">
+            <p class="product-item-brand">Product Brand</p>
+        </div>
+        <div class="row">
+            <p class="product-item-name">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+        </div>
+        <div class="row">
+            <a class="product-item-delete" href="javascript:deleteFromCart()">Eliminar del Carro</a>
+        </div>
+    </div>
+    <div class="col-md-2 align-self-center"> <!--Column 3: Product Quantity-->
+        <div class="row">
+            <input type="number" class="product-quantity-select" min="1" max="100" value="1">
+        </div>
+    </div>
+    <div class="col-md-3 align-self-center"> <!--Column 4: Product Price-->
+        <div class="row">
+            <p style="font-size: 20px;" class="product-price">$12.345.678</p>
+        </div>
+    </div>
+</div>
+<div class="row product-sep">
+    <hr>
+</div>
