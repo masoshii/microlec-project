@@ -177,12 +177,42 @@
         </div>
         <div class="row mx-auto justify-content-center">
             <div class="col-6" id="product-list">
-                <div class="row product-item">
-                    <div class="col-2">
+                <div class="row product-item"> <!--For every entry repeat this block with custom values (jQuery)-->
+                    <div class="col-3"> <!--Column 1: Product Image-->
                         <img src="resources/product1.webp" alt="Diodo" class="product-item-image">
                     </div>
-                    <div class="col-10">
-                        <h1>Epa</h1>
+                    <div class="col-3"> <!--Column 2: Product title, Delete from cart-->
+                        <div class="row">
+                            <h1 class="product-item-title">Name Label</h1>
+                        </div>
+                        <div class="row">
+                            <br>
+                        </div>
+                        <div class="row">
+                            <h1 class="product-item-delete" style="font-size: 20px;">Delete Product Label</h1>
+                        </div>
+                    </div>
+                    <div class="col-3"> <!--Column 3: Product Quantity-->
+                        <div class="row">
+                            <h1 style="font-size: 20px;">Product Quantity Label</h1>
+                        </div>
+                        <div class="row">
+                            <br>[Nothing]
+                        </div>
+                        <div class="row">
+                            <br>[Nothing]
+                        </div>
+                    </div>
+                    <div class="col-3"> <!--Column 3: Product Price-->
+                        <div class="row">
+                            <br>[Nothing]
+                        </div>
+                        <div class="row">
+                            <h1 style="font-size: 20px;">Price Label</h1>
+                        </div>
+                        <div class="row">
+                            <br>[Nothing]
+                        </div>
                     </div>
                 </div>
             </div>

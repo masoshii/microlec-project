@@ -87,7 +87,7 @@
 #promocode-input {
     background-color: rgb(216, 216, 216);
     border: 1px solid rgb(216, 216, 216);
-    border-radius: 10px;
+    border-radius: 5px;
     margin-left: 20px;
 }
 
@@ -98,7 +98,9 @@
 
 #proceed-btn {
     margin-left: 7%;
+    margin-top: 50px;
     max-width: 90%;
+    height: 50px;
     background-color: rgb(63, 185, 63);
     color: white;
     border: 1px solid rgb(63, 185, 63);
@@ -124,10 +126,16 @@
     max-height: 150px;
     border-bottom: 10px solid white;
 }
+
 .product-item-image {
-    margin-left: -11px;
+    margin-left: -12px;
     height: 141px;
     width: auto;
 }
 
+.product-item-title {
+    font-size: 25px;
+    margin-top: 10px;
+    color: rgb(1, 58, 2)
+}
 
