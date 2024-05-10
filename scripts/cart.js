@@ -3,7 +3,7 @@ $(document).ready(function(){
   showElementByCookie(cookieProcess(readCookie("cart_items")), productsInCookie(readCookie("cart_items")));
   updateHTMLQuantity(productsInCookie(readCookie("cart_items")));
   elementExistsValidation(productsInCookie(readCookie("cart_items")));
-  changeButton();
+  refreshButton();
   //document.cookie = "cart_items=001%1&002%2&003%3&004%4&005%5&006%6&007%7&008%8&; expires=Fri, 31 Dec 2100 12:00:00 UTC; path=/";
   $(document).on('input', '.product-quantity-select', function() {
     var sanitized = $(this).val().replace(/[^0-9]/g, "1");
@@ -23,7 +23,7 @@ $(document).ready(function(){
     elementExistsValidation(productsInCookie(readCookie("cart_items")));
     updatePrices(cookieProcess(readCookie("cart_items")), productsInCookie(readCookie("cart_items")));
     updateHTMLQuantity(productsInCookie(readCookie("cart_items")));
-    changeButton();
+    refreshButton();
     const cartButtons = $('.cart-button');
   });
   $(document).on('click', '.cart-button', function() {
@@ -41,6 +41,33 @@ $(document).ready(function(){
     showElementByCookie(cookieProcess(readCookie("cart_items")), productsInCookie(readCookie("cart_items")));
     updateHTMLQuantity(productsInCookie(readCookie("cart_items")));
     elementExistsValidation(productsInCookie(readCookie("cart_items")));
+  });
+  $(document).on('focusout', '.product-quantity-select', function(){
+
+    var cookieMap = cookieProcess(readCookie("cart_items"));
+    var productId = $(this).closest('.product-item').attr('id');
+    var FFormatPid = productId.replace('prod-','');
+    var inputValue = $(this).val()
+    var stepValue = parseInt($(this).attr('step'));
+
+    if (isNumeric(inputValue)){
+      inputValue = parseInt(inputValue);
+
+      if (inputValue > 100){
+        $(this).val(100);
+        updateCookieQuantity(readCookie("cart_items"), FFormatPid, '100');
+      } else if (inputValue <= 0 || inputValue < stepValue || !isMultiple(inputValue,stepValue)) {
+        $(this).val(stepValue);
+        updateCookieQuantity(readCookie("cart_items"), FFormatPid, stepValue);
+      } else {
+        updateCookieQuantity(readCookie("cart_items"), FFormatPid, inputValue);
+      }
+      
+    } else {
+      $(this).val(cookieMap.get(FFormatPid));
+      updateCookieQuantity(readCookie("cart_items"), FFormatPid, cookieMap.get(FFormatPid));
+    }
+    updatePrices(cookieProcess(readCookie("cart_items")), productsInCookie(readCookie("cart_items")));
   });
 });
 
@@ -113,7 +140,7 @@ function showElementByCookie(cookieMap, productQuantity){
       column3.setAttribute('class', 'col-md-2 align-self-center');
       column3.innerHTML = `
       <div class="row">
-        <input type="number" class="product-quantity-select" min="${product.step}" max="100" value="${savedQuantity}">
+        <input type="number" class="product-quantity-select" min="${product.step}" max="100" value="${savedQuantity}" step="${product.step}">
       </div>
       `;
       itemContainer.appendChild(column3);
@@ -229,7 +256,7 @@ function refreshCartItems(){
   elementExistsValidation(productsInCookie(readCookie("cart_items")));
 }
 
-function changeButton(){
+function refreshButton(){
   $('.product-more').each(function() {
     var thisId = $(this).attr('id');
     var FFormatPid = thisId.replace('prod-','');

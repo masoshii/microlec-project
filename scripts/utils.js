@@ -136,4 +136,58 @@ function addProductToCookie(cookieValue, productId, quantity){
   }
 }
 
+
+function updateCookieQuantity(cookieValue, productId, newQuantity){
+  var actualChar;
+  var iterProductId = "";
+  var iterProductQua = "";
+  var fetchingID = true;
+  var newCookie = "";
+  var temp_cambiado;
+  for (let i = 0; i < cookieValue.length; i++) {
+    actualChar = cookieValue.charAt(i);
+    if(actualChar == '%'){
+      if(iterProductId == productId){
+        temp_cambiado = iterProductId;
+        newCookie += iterProductId;
+        newCookie += '%';
+        newCookie += newQuantity;
+        fetchingID = true;
+        iterProductId = "";
+        iterProductQua = "";
+      } else {
+        newCookie += iterProductId;
+        newCookie += '%'
+        fetchingID = false;
+      }
+    } else if (actualChar == '&'){
+      newCookie += iterProductQua;
+      newCookie += '&';
+      fetchingID = true;
+      iterProductId = "";
+      iterProductQua = "";
+    } else if (isNumeric(actualChar)) {
+      if (fetchingID){
+        iterProductId += actualChar;
+      } else if (!fetchingID){
+        iterProductQua += actualChar;
+      }
+    };
+  }
+  document.cookie = `cart_items=${newCookie}; expires=Fri, 31 Dec 2100 12:00:00 UTC; path=/`;
+}
+
 const delay = ms => new Promise(res => setTimeout(res, ms));
+
+function isMultiple(multiple,base){
+  if (isNaN(multiple) || isNaN(base)){
+    return false;
+  } else {
+    var remainder = multiple % base;
+    if (remainder == 0){
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
