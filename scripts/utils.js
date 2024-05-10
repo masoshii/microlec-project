@@ -113,11 +113,27 @@ function deleteProductCookie(cookieValue, idToRemove) {
 }
 
 function addProductToCookie(cookieValue, productId, quantity){
-  if (!productIsInCookie(cookieValue, productId)){
-    idAdition = cookieValue += productId;
-    percAdition = idAdition += '%';
+  var percAdition;
+  var quaAdition;
+  var finalCookie;
+  var idAdition;
+
+  if (cookieValue == null){
+    percAdition = productId += '%';
     quaAdition = percAdition += quantity;
     finalCookie = quaAdition += '&';
     document.cookie = `cart_items=${finalCookie}; expires=Fri, 31 Dec 2100 12:00:00 UTC; path=/`;
+    return;
+  } else {
+    if (!productIsInCookie(cookieValue, productId)){
+      idAdition = cookieValue += productId;
+      percAdition = idAdition += '%';
+      quaAdition = percAdition += quantity;
+      finalCookie = quaAdition += '&';
+      document.cookie = `cart_items=${finalCookie}; expires=Fri, 31 Dec 2100 12:00:00 UTC; path=/`;
+      return;
+    }
   }
 }
+
+const delay = ms => new Promise(res => setTimeout(res, ms));
