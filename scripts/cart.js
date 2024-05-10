@@ -3,6 +3,7 @@ $(document).ready(function(){
   showElementByCookie(cookieProcess(readCookie("cart_items")), productsInCookie(readCookie("cart_items")));
   updateHTMLQuantity(productsInCookie(readCookie("cart_items")));
   elementExistsValidation(productsInCookie(readCookie("cart_items")));
+  //document.cookie = "cart_items=001%1&002%2&003%3&004%4&005%5&006%6&007%7&008%8&; expires=Fri, 31 Dec 2100 12:00:00 UTC; path=/";
   $(document).on('input', '.product-quantity-select', function() {
     var sanitized = $(this).val().replace(/[^0-9]/g, "1");
     $(this).val(sanitized);
@@ -15,8 +16,12 @@ $(document).ready(function(){
     var closestRow = productItem.nextAll('.product-sep').first();
     $(`#${productId}`).remove();
     closestRow.remove();
+
     deleteProductCookie(readCookie("cart_items"),formatPid);
     elementExistsValidation(productsInCookie(readCookie("cart_items")));
+    updatePrices(cookieProcess(readCookie("cart_items")), productsInCookie(readCookie("cart_items")));
+    updateHTMLQuantity(productsInCookie(readCookie("cart_items")));
+    const cartButtons = $('.cart-button');
   });
 });
 
@@ -34,7 +39,6 @@ function showElementByCookie(cookieMap, productQuantity){
   var productId;
   var productQua;
   var promises = [];
-  var totalMoney = 0;
 
   const formatter = new Intl.NumberFormat('es-CL', {
     style: 'currency',
@@ -125,7 +129,12 @@ function updatePrices(cookieMap, productQuantity){
     currency: 'CLP',
   });
 
-
+  if (productQuantity == 0){
+    $('#product-qvalue').html(formatter.format(0));
+    $('#tship-value').html(formatter.format(0));
+    $('#tproduct-value').html(formatter.format(0));
+    return;
+  }
   for (let i = 0; i<productQuantity; i++){
     productId = Array.from(cookieMap.keys())[i];
     productQua = cookieMap.get(productId);
@@ -181,11 +190,13 @@ function getProductById(productID){
   })
 }
 
-
-
 function updateHTMLQuantity(productQuantity){
+  if (productQuantity == 0){
+    document.title = `Microlec | Carro`;
+  } else {
+    document.title = `Microlec | Carro (${productQuantity})`;
+  }
   $("#product-qtitle").html(`Productos (${productQuantity}):`);
-  document.title = `Microlec | Carro (${productQuantity})`;
 }
 
 

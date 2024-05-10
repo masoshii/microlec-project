@@ -49,6 +49,30 @@ function productsInCookie(cookieValue){
   }
   return quantity;
 }
+
+function productIsInCookie(cookieValue, productId){
+  var actualChar;
+  var iterProductId = "";
+  var fetchingID = true;
+
+  for (let i = 0; i < cookieValue.length; i++) {
+    actualChar = cookieValue.charAt(i);
+    if(actualChar == '%'){
+      fetchingID = false;
+    } else if (actualChar == '&'){
+      if (productId == iterProductId){
+        return true;
+      }
+      iterProductId = "";
+      fetchingID = true;
+    } else if (isNumeric(actualChar)) {
+      if (fetchingID){
+        iterProductId += actualChar;
+      }
+    };
+  }
+  return false;
+}
   
 function readCookie(name)
 {
@@ -62,13 +86,21 @@ for (var i = 0; i < parts.length; i++)
 }
 return null;
 }
-  
+
+
+
 function isNumeric(str) {
 if (typeof str != "string") return false
 return !isNaN(str) && !isNaN(parseFloat(str))
 }
 
 function deleteProductCookie(cookieValue, idToRemove) {
+
+  if (productsInCookie(cookieValue) == 1){
+    document.cookie = `cart_items=; expires=Fri, 31 Dec 2100 12:00:00 UTC; path=/`
+    return;
+  }
+
   var regex = new RegExp(`${idToRemove}%\\d+&`, 'g');
   
   var updatedCookieValue = cookieValue.replace(regex, '');
@@ -78,4 +110,14 @@ function deleteProductCookie(cookieValue, idToRemove) {
   }
   
   document.cookie = `cart_items=${updatedCookieValue}; expires=Fri, 31 Dec 2100 12:00:00 UTC; path=/`
+}
+
+function addProductToCookie(cookieValue, productId, quantity){
+  if (!productIsInCookie(cookieValue, productId)){
+    idAdition = cookieValue += productId;
+    percAdition = idAdition += '%';
+    quaAdition = percAdition += quantity;
+    finalCookie = quaAdition += '&';
+    document.cookie = `cart_items=${finalCookie}; expires=Fri, 31 Dec 2100 12:00:00 UTC; path=/`;
+  }
 }
