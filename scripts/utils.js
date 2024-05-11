@@ -191,3 +191,22 @@ function isMultiple(multiple,base){
     }
   }
 }
+
+function deleteExtraSpace(str) {
+  while (str.charAt(0) === ' ') {
+      str = str.slice(1);
+  }
+  while (str.charAt(str.length - 1) === ' ') {
+      str = str.slice(0, -1);
+  }
+  return str;
+}
+
+function formatTimeHM(timeString) {
+  if (!/^([01]\d|2[0-3]):([0-5]\d):([0-5]\d)$/.test(timeString)) {
+      throw new Error('Unexpected format.');
+  }
+  const hourAndMinute = timeString.split(':').slice(0, 2).join(':');
+
+  return hourAndMinute; 
+}
