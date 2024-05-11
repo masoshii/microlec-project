@@ -1,9 +1,22 @@
 $(document).ready(function(){
+    $(document).on('change','#filter-select',function(){
+        var filterValue = $(this).val();
+        if (filterValue == 'Todas las comunas'){
+            removeElementsByClass('pharmacy-item');
+            processPharmacies();
+        } else {
+            removeElementsByClass('pharmacy-item');
+            processPharmacies(filterValue);
+        }
+    });
+    addComOptions();
     processPharmacies();
 })
 
 
-
+function deleteAllPharmacies(){
+    $('.div.pharmacy-item').remove();
+}
 
 function processPharmacies(filterComuna = 'allcom') {
     return new Promise((resolve, reject) => {
@@ -85,6 +98,40 @@ function processPharmacies(filterComuna = 'allcom') {
             });
     });
 }
+
+function addComOptions() {
+    return new Promise((resolve, reject) => {
+        getPharmacies()
+            .then(pharmacies => {
+                let filteredPharmacies = pharmacies;
+                let coms = [];
+                let actualCom = "";
+                filteredPharmacies.forEach(pharmacy => {
+                    actualCom = deleteExtraSpace(pharmacy.comuna);
+                    formatCom = capitalize(actualCom);
+
+                    if (!coms.includes(formatCom)){
+                        coms.push(formatCom);
+                    }
+                    coms.sort();
+                });
+                for (let i = 0; i < coms.length; i++) {
+                    var comOption = document.createElement('option');
+                    comOption.setAttribute('id', coms[i].toLowerCase().replace(' ', '-'));
+                    comOption.setAttribute('value', coms[i]);
+                    comOption.setAttribute('class', 'filter-option');
+                    comOption.innerHTML = coms[i];
+
+                    document.getElementById('filter-select').appendChild(comOption);
+                }                
+                resolve();
+            })
+            .catch(error => {
+                reject(error);
+            });
+    });
+}
+
 
 function getPharmacies() {
     return new Promise((resolve, reject) => {
