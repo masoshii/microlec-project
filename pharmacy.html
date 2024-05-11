@@ -179,41 +179,18 @@
                 <p>Debido a la promulgación de la <a href="https://www.bcn.cl/leychile/navegar?idLey=1">Ley n°1</a>, es nuestro deber mostrarle un listado de farmacias del país.</p>
             </div>
             <div class="row text-center" id="list-filters">
-                <br>
+                <div class="col">
+                    <p>Filtro:</p>
+                </div>
+                <div class="col d-flex justify-content-start align-items-start">
+                    <select name="" id="filter-select">
+                        <option value="Todas las comunas" id="all-com" class="filter-option">Todas las comunas</option>
+                    </select>
+                </div>
             </div>
             <div class="col-12 align-items-center">
                 <div class="row align-items-center " id="pharmacy-list">
-                    <div class="row pharmacy-item mx-auto">
-                        <div class="col-2">
-                            <img src="resources/products/prod-000.png" alt="Alt Text" class="pharmacy-image">
-                        </div>
-                        <div class="col-5">
-                            <div class="row">
-                                <h3 class="pharmacy-name">Pharmacy Name</h3>
-                            </div>
-                            <div class="row">
-                                <a class="pharmacy-loc" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam.</a>
-                            </div>
-                        </div>
-                        <div class="col-4 align-items-end text-end">
-                            <div class="row">
-                                <div class="row">
-                                    <p class="pharmacy-number-title">Número telefónico:</p>
-                                </div>
-                                <div class="row">
-                                    <p class="pharmacy-number">+56 9 1234 5678</p>                            
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="row">
-                                    <p class="pharmacy-hour-title">Hora de atención:</p>
-                                </div>
-                                <div class="row">
-                                    <p class="pharmacy-hour">00:00 - 00:00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -329,5 +306,17 @@
             </div>
         </div>
     </footer>
+    <script>
+        $(document).ready(function() {
+            $('#filter-select').change(function() {
+                var selectedCom = $(this).val();
+    
+                if (selectedCom === "") {
+                    return;
+                }
+                alert("Has seleccionado el color " + selectedCom);
+            });
+        });
+    </script>
 </body>
 </html>
