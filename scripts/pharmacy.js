@@ -32,8 +32,8 @@ function processPharmacies(filterComuna = 'allcom') {
 
                     var opening = formatTimeHM(pharmacy.opening_hours.opening_time);
                     var closing = formatTimeHM(pharmacy.opening_hours.closing_time);
-                    var long = pharmacy.location.local_lat;
-                    var lat = pharmacy.location.local_lng;
+                    var long = pharmacy.location.longitude;
+                    var lat = pharmacy.location.latitude;
                     var addr = pharmacy.address + ', ' + pharmacy.comuna;
                     var name = deleteExtraSpace(pharmacy.name);
                     var image = "";
@@ -63,7 +63,7 @@ function processPharmacies(filterComuna = 'allcom') {
                         <h3 class="pharmacy-name">${name}</h3>
                     </div>
                     <div class="row">
-                        <a class="pharmacy-loc" href="http://maps.google.com/?ll=${lat},${long}">${addr}</a>
+                        <a class="pharmacy-loc" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${lat}%2C${long}">${addr}</a>
                     </div>
                     `;
                     itemContainer.appendChild(childTwo);
