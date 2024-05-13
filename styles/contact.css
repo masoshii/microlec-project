@@ -74,8 +74,13 @@ main {
     color: white;
 }
 
-#warn-msg {
-    font-size: 10px;
+.form-group {
+    position: relative !important;
+}
+.error-msg {
+    font-size: 20px;
+    color: rgb(192, 56, 56);
+    opacity: 0;
 }
 
 @media (min-width: 2000px){
@@ -83,9 +88,6 @@ main {
         max-height: 1200px;
         width: auto;
     }
-}
-
-@media (min-width: 2000px){
     #contact-title {
         font-size: 60px;
     }
@@ -126,5 +128,19 @@ main {
     }
     .invalid-feedback {
         font-size: 25px !important;
+    }
+    #cancel-btn, #confirm-btn {
+        font-size: 30px;
+    }
+    .modal-dialog {
+        margin-right: 40vw !important;
+    }
+    
+    .modal-title {
+        font-size: 60px;
+    }
+    
+    .modal-body {
+        font-size: 30px;
     }
 }

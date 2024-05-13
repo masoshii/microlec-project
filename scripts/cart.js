@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
   showElementByCookie(cookieProcess(readCookie("cart_items")), productsInCookie(readCookie("cart_items")));
   updateHTMLQuantity(productsInCookie(readCookie("cart_items")));

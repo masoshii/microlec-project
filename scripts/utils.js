@@ -1,6 +1,5 @@
 function isEmailValid(emailString){
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|org|net|cl|ar|co|uy|uk|pe|br|bo)$/;
-
     return emailRegex.test(emailString);
 }
 
@@ -220,4 +219,8 @@ function removeElementsByClass(className){
   while(elements.length > 0){
       elements[0].parentNode.removeChild(elements[0]);
   }
+}
+
+function isBlank(str) {
+  return (!str || /^\s*$/.test(str));
 }

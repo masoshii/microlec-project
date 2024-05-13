@@ -14,6 +14,8 @@
     <script src="scripts/jquery-3.7.1.min.js.js"></script>
     <script src="scripts/nav_scripts.js"></script>
     <script src="scripts/init-cookie.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/utils.js"></script>
     <!--Exports Externos-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -173,151 +175,232 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="d-flex justify-content-center">
-                        <img src="resources/carousel1.jpg" alt="Offer 1">
+                        <img src="resources/carousel1.png" alt="Offer 1">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="d-flex justify-content-center">
-                        <img src="resources/carousel2.jpg" alt="Offer 1">
+                        <img src="resources/carousel2.png" alt="Offer 1">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="d-flex justify-content-center">
-                        <img src="resources/carousel3.jpg" alt="Offer 1">
+                        <img src="resources/carousel3.png" alt="Offer 1">
                     </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#indexcarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="bi bi-arrow-left-short" aria-hidden="true"></span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#indexcarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="bi bi-arrow-right-short" aria-hidden="true"></span>
             </button>
         </div>
-        <br>
-        <div class="container-fluid">
+        <div class="container-fluid mx-auto" id="more-products-container">
+            <div class="d-flex mx-auto justify-content-center adbanner">
+                <a href="https://www.google.com/search?q=cubix+inc"><img src="resources/adbanner.png" alt="Anuncio" id="adbanner-img"></a>
+            </div>
             <div class="row">
-                <div class="col">
-                    <h1 id="title-wlc">¡Bienvenido/a a Microlec!</h1>
-                </div>
+                <h1 id="product-more-title">
+                    ¡Explora más de nuestros productos!
+                </h1>
             </div>
-            <br>
-            <div class="row">
-                <div class="col">
-                    <h5 class="text-left" id="products-title">¡Explora nuestros mejores productos!</h5>
-                </div>
+            <div class="row justify-content-center">
+                <hr id="title-sep">
             </div>
-            <div class="d-flex flex-row d-inline-block mx-auto" id="prodcards">
-                    <div class="card item-card bg-dark">
-                        <center>
-                            <a href="#">
-                                <img src="resources/product1.webp" alt="Diodo" class="card-img-top">
-                            </a>
-                        </center>
-                        <div class="card-body">
-                            <h5 class="card-title item-title">Diodo Rectificador 1N4007</h5>
-                            <br>
-                            <h5 class="card-text item-price">$230 c/u</h5>
-                        </div>
+            <div class="row products-list">
+                <div class="col product-more" id="prod-001-more">
+                    <div class="row justify-content-center">
+                        <img src="resources/products/prod-001.webp" alt="Diodo Rectificador 1N4007">
                     </div>
-
-                    <div class="card item-card bg-dark">
-                        <center>
-                            <a href="#">
-                                <img src="resources/product2.webp" alt="Arduino" class="card-img-top">
-                            </a>
-                        </center>
-                        <div class="card-body">
-                            <h5 class="card-title item-title">Arduino Uno R3</h5>
-                            <br>
-                            <h5 class="card-text item-price">$25.900</h5>
-                        </div>
+                    <div class="row text-left justify-content-center">
+                        <h3 class="more-products-brand">Vishay Semiconductors</h3>
                     </div>
-
-                    <div class="card item-card bg-dark">
-                        <center>
-                            <a href="#">
-                                <img src="resources/product3.webp" alt="RTX" class="card-img-top">
-                            <a href=""></a>
-                        </center>
-                        <div class="card-body">
-                            <h5 class="card-title item-title">EVGA GeForce RTX 4090</h5>
-                            <br>
-                            <h5 class="card-text item-price">$2.699.000</h5>
-                        </div>
+                    <div class="row text-left">
+                        <p class="more-products-name">Diodo Rectificador 1N4007</p>
                     </div>
-
-                    <div class="card item-card bg-dark">
-                        <center>
-                            <a href="#">
-                                <img src="resources/product4.png" alt="Raspberry PI" class="card-img-top">
-                            </a>
-                        </center>
-                        <div class="card-body">
-                            <h5 class="card-title item-title">Raspberry PI 5</h5>
-                            <br>
-                            <h5 class="card-text item-price">$139.990</h5>
+                    <div class="row text-left">
+                        <div class="col">
+                            <p class="more-products-price">$99 c/u</p>
                         </div>
-                    </div>
-
-                    <div class="card item-card bg-dark">
-                        <center>
-                            <a href="#">
-                                <img src="resources/product5.webp" alt="Resistencias" class="card-img-top">
-                            </a>
-                        </center>
-                        <div class="card-body">
-                            <h5 class="card-title item-title">10x Pack Resistencias 43000Ω</h5>
-                            <br>
-                            <h5 class="card-text item-price">$3.400</h5>
-                        </div>
-                    </div>
-
-                    <div class="card item-card bg-dark">
-                        <center>
-                            <a href="#">
-                                <img src="resources/product6.webp" alt="Cable Jack" class="card-img-top">
-                            </a>
-                        </center>
-                        <div class="card-body">
-                            <h5 class="card-title item-title">Cable Jack 6.3mm de 20 Metros</h5>
-                            <br>
-                            <h5 class="card-text item-price">$22.990</h5>
-                        </div>
-                    </div>
-
-                    <div class="card item-card bg-dark">
-                        <center>
-                            <a href="#">
-                                <img src="resources/product7.webp" alt="Multímetro" class="card-img-top">
-                            </a>
-                        </center>
-                        <div class="card-body">
-                            <h5 class="card-title item-title">Multímetro Digital Fluke 114</h5>
-                            <br>
-                            <h5 class="card-text item-price">$320.000</h5>
-                        </div>
-                    </div>
-
-                    <div class="card item-card bg-dark">
-                        <center>
-                            <a href="#">
-                                <img src="resources/product8.webp" alt="WD Black" class="card-img-top">
-                            </a>
-                        </center>
-                        <div class="card-body">
-                            <h5 class="card-title item-title">Western Digital Black 500GB</h5>
-                            <br>
-                            <h5 class="card-text item-price">$55.990</h5>
+                        <div class="col text-end align-self-right btn-col">
+                            <button class="cart-button">
+                                <span class="add-to-cart">Añadir al carro</span>
+                                <span class="added-to-cart">Añadido</i></span>
+                                <i class="bi bi-cart-fill"></i>
+                                <i class="bi bi-box-seam-fill"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2 id="moreinfo">¿Quieres más información sobre nosotros?</h2>
-                <h2 class="enterinv"><a href="#" style="text-decoration: none; color: white;">¡Entra aquí!</a></h2>
+                <div class="col product-more" id="prod-002-more">
+                    <div class="row justify-content-center">
+                        <img src="resources/products/prod-002.webp" alt="Diodo Rectificador 1N4007">
+                    </div>
+                    <div class="row text-left justify-content-center">
+                        <h3 class="more-products-brand">Arduino</h3>
+                    </div>
+                    <div class="row text-left">
+                        <p class="more-products-name">Arduino Uno R3</p>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col">
+                            <p class="more-products-price">$25.000</p>
+                        </div>
+                        <div class="col text-end align-self-right btn-col">
+                            <button class="cart-button">
+                                <span class="add-to-cart">Añadir al carro</span>
+                                <span class="added-to-cart">Añadido</i></span>
+                                <i class="bi bi-cart-fill"></i>
+                                <i class="bi bi-box-seam-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col product-more" id="prod-003-more">
+                    <div class="row justify-content-center">
+                        <img src="resources/products/prod-003.webp" alt="Diodo Rectificador 1N4007">
+                    </div>
+                    <div class="row text-left justify-content-center">
+                        <h3 class="more-products-brand">EVGA</h3>
+                    </div>
+                    <div class="row text-left">
+                        <p class="more-products-name">NVIDIA GeForce RTX 4090</p>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col">
+                            <p class="more-products-price">$2.699.000</p>
+                        </div>
+                        <div class="col text-end align-self-right btn-col">
+                            <button class="cart-button">
+                                <span class="add-to-cart">Añadir al carro</span>
+                                <span class="added-to-cart">Añadido</i></span>
+                                <i class="bi bi-cart-fill"></i>
+                                <i class="bi bi-box-seam-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col product-more" id="prod-004-more">
+                    <div class="row justify-content-center">
+                        <img src="resources/products/prod-004.png" alt="Diodo Rectificador 1N4007">
+                    </div>
+                    <div class="row text-left justify-content-center">
+                        <h3 class="more-products-brand">Raspberry</h3>
+                    </div>
+                    <div class="row text-left">
+                        <p class="more-products-name">Raspberry PI 5</p>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col">
+                            <p class="more-products-price">$139.990</p>
+                        </div>
+                        <div class="col text-end align-self-right btn-col">
+                            <button class="cart-button">
+                                <span class="add-to-cart">Añadir al carro</span>
+                                <span class="added-to-cart">Añadido</i></span>
+                                <i class="bi bi-cart-fill"></i>
+                                <i class="bi bi-box-seam-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col product-more" id="prod-005-more">
+                    <div class="row justify-content-center">
+                        <img src="resources/products/prod-005.webp" alt="Diodo Rectificador 1N4007">
+                    </div>
+                    <div class="row text-left justify-content-center">
+                        <h3 class="more-products-brand">Vishay Semiconductors</h3>
+                    </div>
+                    <div class="row text-left">
+                        <p class="more-products-name">10X Pack Resistencias 43000Ω</p>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col">
+                            <p class="more-products-price">$3.400</p>
+                        </div>
+                        <div class="col text-end align-self-right btn-col">
+                            <button class="cart-button">
+                                <span class="add-to-cart">Añadir al carro</span>
+                                <span class="added-to-cart">Añadido</i></span>
+                                <i class="bi bi-cart-fill"></i>
+                                <i class="bi bi-box-seam-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col product-more" id="prod-006-more">
+                    <div class="row justify-content-center">
+                        <img src="resources/products/prod-006.webp" alt="Diodo Rectificador 1N4007">
+                    </div>
+                    <div class="row text-left justify-content-center">
+                        <h3 class="more-products-brand">Genérico</h3>
+                    </div>
+                    <div class="row text-left">
+                        <p class="more-products-name">Cable Jack 6.3mm de 20 Metros</p>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col">
+                            <p class="more-products-price">$22.990</p>
+                        </div>
+                        <div class="col text-end align-self-right btn-col">
+                            <button class="cart-button">
+                                <span class="add-to-cart">Añadir al carro</span>
+                                <span class="added-to-cart">Añadido</i></span>
+                                <i class="bi bi-cart-fill"></i>
+                                <i class="bi bi-box-seam-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col product-more" id="prod-007-more">
+                    <div class="row justify-content-center">
+                        <img src="resources/products/prod-007.webp" alt="Diodo Rectificador 1N4007">
+                    </div>
+                    <div class="row text-left justify-content-center">
+                        <h3 class="more-products-brand">Fluke</h3>
+                    </div>
+                    <div class="row text-left">
+                        <p class="more-products-name">Multímetro Digital Fluke 114</p>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col">
+                            <p class="more-products-price">$320.000</p>
+                        </div>
+                        <div class="col text-end align-self-right btn-col">
+                            <button class="cart-button">
+                                <span class="add-to-cart">Añadir al carro</span>
+                                <span class="added-to-cart">Añadido</i></span>
+                                <i class="bi bi-cart-fill"></i>
+                                <i class="bi bi-box-seam-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col product-more" id="prod-008-more">
+                    <div class="row justify-content-center">
+                        <img src="resources/products/prod-008.webp" alt="Diodo Rectificador 1N4007">
+                    </div>
+                    <div class="row text-left justify-content-center">
+                        <h3 class="more-products-brand">Western Digital</h3>
+                    </div>
+                    <div class="row text-left">
+                        <p class="more-products-name" style="font-size: 15px;">WD BLACK Unidad SSD 500GB PCIe NVMe</p>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col">
+                            <p class="more-products-price">$55.990</p>
+                        </div>
+                        <div class="col text-end align-self-right btn-col">
+                            <button class="cart-button">
+                                <span class="add-to-cart">Añadir al carro</span>
+                                <span class="added-to-cart">Añadido</i></span>
+                                <i class="bi bi-cart-fill"></i>
+                                <i class="bi bi-box-seam-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -432,5 +515,17 @@
             </div>
         </div>
     </footer>
+    <script>
+        const cartButtons = document.querySelectorAll('.cart-button');
+
+        cartButtons.forEach(button => {
+            button.addEventListener('click', cartClick);
+        });
+        
+        function cartClick() {
+            let button = this;
+            button.classList.add('clicked');
+        }
+    </script>
 </body>
 </html>

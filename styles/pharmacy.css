@@ -4,7 +4,7 @@
     margin-top: 100px;
     max-width: 60%;
     min-width: 60%;
-    min-height: 1266px;
+    min-height: 1300px;
     margin-bottom: 100px;
     padding-bottom: 50px;
 }
@@ -16,15 +16,15 @@
     color: rgb(6, 58, 0);
 }
 
-#pharmacy-desc p {
-    font-size: 20px;
+#pharmacy-desc p, a{
+    font-size: 27px;
     color: rgb(34, 34, 34);
 }
 
 #pharmacy-list {
     background-color: rgb(238, 238, 238);
     overflow-y: scroll;
-    max-height: 1000px;
+    max-height: 1050px;
 }
 
 .pharmacy-image {
@@ -38,6 +38,9 @@
     width: 50%;
 }
 
+#list-filters {
+    font-size: 27px;
+}
 
 
 
@@ -64,8 +67,16 @@
     font-size: 25px;
 }
 
+.pharmacy-number {
+    font-size: 20px;
+}
+
 .pharmacy-hour-title {
     color: rgb(32, 32, 32);
     font-size: 27px;
+}
+
+.pharmacy-hour {
+    font-size: 20px;
 }
 

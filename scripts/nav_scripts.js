@@ -1,3 +1,10 @@
+$(document).ready(function(){
+    $(document).on('input', '#search-form-input', function(){
+        $('#search-form-input').css('border', 'none');
+    })
+})
+
+
 let isOpen = false;
 
 
