@@ -388,3 +388,18 @@
 .exists span.added-to-cart{
     opacity: 1;
 }
+
+#cancel-btn, #confirm-btn {
+    font-size: 30px;
+}
+.modal-dialog {
+    margin-right: 40vw !important;
+}
+
+.modal-title {
+    font-size: 60px;
+}
+
+.modal-body {
+    font-size: 30px;
+}

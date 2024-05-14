@@ -67,6 +67,38 @@ $(document).ready(function(){
     }
     updatePrices(cookieProcess(readCookie("cart_items")), productsInCookie(readCookie("cart_items")));
   });
+  $(document).on('click', '#proceed-btn', function () {
+
+    var productsQua = productsInCookie(readCookie("cart_items"));
+
+    if (productsQua > 0 ){
+      $('.modal-body').html(`Usted está a punto de comprar ${productsInCookie(readCookie("cart_items"))} producto(s), ¿Está seguro?`);
+      $('#send-confirmation-modal').modal('show');
+      $('#cancel-btn').css('display', 'block');
+    } else {
+      $('.modal-title').html('No hay productos');
+      $('.modal-body').html(`¡Usted no tiene productos en su carro!`);
+      $('#cancel-btn').css('display', 'none')
+      $('#send-confirmation-modal').modal('show');
+    }
+  })
+
+
+  $(document).on('click', '.btn-close', function(){
+    $('#send-confirmation-modal').modal('hide');
+  })
+
+  $(document).on('click', '#cancel-btn', function(){
+      $('#send-confirmation-modal').modal('hide');
+  })
+
+  $(document).on('click', '#confirm-btn', function(){
+    if( productsInCookie(readCookie("cart_items")) > 0) {
+      location.reload();
+    } else {
+      $('#send-confirmation-modal').modal('hide');
+    }
+  })
 });
 
 

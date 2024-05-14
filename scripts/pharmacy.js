@@ -137,7 +137,7 @@ function addComOptions() {
 
 function getPharmacies() {
     return new Promise((resolve, reject) => {
-        fetch('https://midas.minsal.cl/farmacia_v2/WS/getLocales.php') //https://midas.minsal.cl/farmacia_v2/WS/getLocales.php && https://api.npoint.io/c6e6c50e3de349bc5620
+        fetch('https://api.npoint.io/c6e6c50e3de349bc5620') //https://midas.minsal.cl/farmacia_v2/WS/getLocales.php && https://api.npoint.io/c6e6c50e3de349bc5620
             .then(response => response.json())
             .then(data => {
                 const pharmacies = data.map(pharmacy => ({
