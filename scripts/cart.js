@@ -94,6 +94,7 @@ $(document).ready(function(){
 
   $(document).on('click', '#confirm-btn', function(){
     if( productsInCookie(readCookie("cart_items")) > 0) {
+      document.cookie = "cart_items=; expires=Fri, 31 Dec 2100 12:00:00 UTC; path=/";
       location.reload();
     } else {
       $('#send-confirmation-modal').modal('hide');
