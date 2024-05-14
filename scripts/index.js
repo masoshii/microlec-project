@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    document.cookie = "cart_items=; expires=Fri, 31 Dec 2100 12:00:00 UTC; path=/";
     refreshButton();
     $(document).on('click', '.cart-button', function() {
         var cartItem = $(this).closest('.product-more');

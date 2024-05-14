@@ -3,7 +3,6 @@ $(document).ready(function(){
   updateHTMLQuantity(productsInCookie(readCookie("cart_items")));
   elementExistsValidation(productsInCookie(readCookie("cart_items")));
   refreshButton();
-  //document.cookie = "cart_items=001%1&002%2&003%3&004%4&005%5&006%6&007%7&008%8&; expires=Fri, 31 Dec 2100 12:00:00 UTC; path=/";
   $(document).on('input', '.product-quantity-select', function() {
     var sanitized = $(this).val().replace(/[^0-9]/g, "1");
     $(this).val(sanitized);

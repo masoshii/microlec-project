@@ -63,23 +63,23 @@ footer, main::after {
 
 @media (min-width: 3000px){
     .fwtext h4{
-        font-size: 80px;
+        font-size: 50px;
     }
 
     .rs-ico i{
-        font-size: 60px;
+        font-size: 30px;
     }
 
     .com-info{
-        font-size: 40px;
+        font-size: 20px;
     }
 
     .footer-title h3 {
-        font-size: 50px;
+        font-size: 40px;
         color: rgb(168, 168, 168);
     }
     
     .footer-choice a, .footer-choice p{
-        font-size: 40px;
+        font-size: 20px;
     }
 }

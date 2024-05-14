@@ -1,3 +1,9 @@
+$(document).ready(function() {
+  if (readCookie("cart_items") == null) {
+    document.cookie = "cart_items=; expires=Fri, 31 Dec 2100 12:00:00 UTC; path=/";
+  }
+});
+
 function isEmailValid(emailString){
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|org|net|cl|ar|co|uy|uk|pe|br|bo)$/;
     return emailRegex.test(emailString);
